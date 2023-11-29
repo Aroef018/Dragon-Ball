@@ -39,12 +39,13 @@
 				$nama=$row['nama'];
 				$nyawa=$row['nyawa'];
 				$serang=$row['serang'];
+				$username_musuh=$row['username'];
 				echo "<tr>
 					<td>".$nomor."</td>
 					<td>".$nama."</td>
 					<td>".$nyawa."</td>
 					<td>".$serang."</td>
-					<td><a href='serang.php?musuh=$nama'>Serang</a></td>
+					<td><a href='serang.php?musuh=$username_musuh'>Serang</a></td>
 
 				</tr>";
 				$nomor++;
