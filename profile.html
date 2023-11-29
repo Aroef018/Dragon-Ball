@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-GLhlTQ8iKu1rHN/8i+RQSmPhzU9K4T7LdyExlq+qDScBd6jZpmkaDd6jI5L+eO2SM" crossorigin="anonymous">
+    <link rel="stylesheet" href="profile.css">
+       
+</head>
+
+<body>
+    <button class="back-button"><i class="fas fa-arrow-left"></i> Back</button>
+    <div class="container">
+        <div class="left-section">
+            <div class="image-preview" id="image-preview"></div>
+            <div>
+            <label id="img" for="image-upload" class="button">Add Profile Photo</label>
+            <input type="file" id="image-upload" /></div>
+        </div>
+        <div class="right-section">
+            <div class="card-header">
+            <h1>PROFILE</h1>
+            <a class="edit-profile"><i class="fas fa-edit"></i>Edit Profile</a></div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <h4 hidden>admin</h4>
+                <input type="text" id="username" value="Rian123">
+            </div>
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <h4 hidden>admin</h4>
+                <input type="text" id="nama" value="Ahmad Rian">
+            </div>
+            <div class="form-group">
+                <label for="bio">Bio:</label>
+                <textarea id="bio" rows="10" cols="30">.....</textarea>
+            </div>
+            <div class="form-group">
+                <button style='background-color: blue;'>Simpan</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const imageUpload = document

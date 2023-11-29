@@ -1,0 +1,129 @@
+    body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(img/f7d6fb89e0f50561204f033f8afce70e.jpg);
+            background-size: 100%;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: relative;
+        }
+
+        h1 {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow to the text */
+    }
+
+        .left-section {
+            flex: 0 0 40%; /* Set a fixed width for the left section */
+        }
+
+        .right-section {
+            text-align: left;
+            flex: 0 0 55%; /* Set a fixed width for the right section */
+        }
+
+        .image-preview {
+            margin-left: 40px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            margin-right:20px;
+            display: none;
+        }
+
+        button {
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            transition: 0.3s;
+        }
+
+        
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .edit-profile {
+            margin-top: 30px;
+            color: blue;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: maroon;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+         #img{
+            text-align: center;
+            color: blue;
+            text-decoration: underline;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .card-header{
+            display: flex;
+            justify-content: space-between;
+        }
