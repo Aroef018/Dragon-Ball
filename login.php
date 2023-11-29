@@ -21,6 +21,9 @@ if (isset($_POST['login'])) {
             $_SESSION['gambar']= $row['foto_profil'];
             $_SESSION['nama']=$row['nama'];
             $_SESSION['bio']=$row['bio'];
+            $_SESSION['nyawa']=$row['nyawa'];
+            $_SESSION['serang']=$row['serang'];
+            
             if ($row['username'] == "admin") {
                 $_SESSION["admin"] = true;
                 header("Location: admin.php");
