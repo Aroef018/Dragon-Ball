@@ -19,6 +19,8 @@ if (isset($_POST['login'])) {
             $_SESSION["login"] = true;
             $_SESSION['username'] = $row['username'];
             $_SESSION['gambar']= $row['foto_profil'];
+            $_SESSION['nama']=$row['nama'];
+            $_SESSION['bio']=$row['bio'];
             if ($row['username'] == "admin") {
                 $_SESSION["admin"] = true;
                 header("Location: admin.php");
