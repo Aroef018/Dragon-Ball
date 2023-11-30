@@ -25,7 +25,7 @@
 
     <div class="admin-header">
         <div class="logo-and-info">
-            <a href="profil.php"><img src="img/<?php echo $gambar;?>" alt="Admin Avatar" class="admin-avatar"></a>
+            <a href="admin-profil.php"><img src="img/<?php echo $gambar;?>" alt="Admin Avatar" class="admin-avatar"></a>
             <div class="admin-info">
                 <span>Admin</span>
             </div>
