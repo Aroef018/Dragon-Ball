@@ -29,7 +29,7 @@
                 <span><?php echo $username; ?></span>
             </div>
         </div>
-        <button class="status-button" onclick="PaymentRequestUpdateEvent">Status</button>
+        <a href="status.php"><button class="status-button" onclick="PaymentRequestUpdateEvent">Status</button></a>
     </div>
 
     <div class="table-container">
