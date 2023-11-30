@@ -1,0 +1,136 @@
+
+.text-black{
+    color: black !important;
+}
+.text-danger{
+    color: #E33629 !important;
+}
+.border-0{
+    border: 0px !important;
+}
+
+/* Login & Register Page */
+form.login a{
+    color: black !important;
+    text-decoration: none;
+}
+.password-toggle{
+    z-index: 10;
+    margin: 0px 5px -30px auto;
+}
+.btn-login{
+    background-color: white !important;
+    color: black !important;
+    border: 2px solid black;
+    width: 100%;
+    box-shadow: 0px 0px 5px #666666;
+}
+
+/* Serang Page */
+#serang{
+    background-image: url(img/serang.png);
+    background-size: 100%;
+}
+.btn-back{
+    background-color: black;
+    color: white;
+    border-radius: 100px;
+}
+.btn-serang{
+    background-color: #E33629;
+    color: white;
+    padding: 12px 16px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 0px;
+    font-size: 18px;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.player{
+    width: 40%;
+}
+.player img{
+    width: 250px !important;
+}
+.player h2{
+    margin: 16px 0px;
+    font-size: 28px;
+}
+.player p, .player h2, .player span{
+    color: black !important;
+}
+.player .life-bar{
+    border-radius: 20px; 
+    height: 20px; 
+    width: 200px
+}
+#img-goku{
+    position: absolute;
+    right: -56px;
+    top: -35px;
+    width: 200px;
+}
+
+/* Twitter Page */
+#twitter{
+    background-image: url(img/serang.png);
+    background-size: 100%;
+}
+#twitter .card{
+    background-color: #FFFFFF80;
+    margin-bottom: 4px;
+    padding: 16px;
+}
+#twitter textarea{
+    background-color: transparent;
+    border: 0px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 16px;
+    width: -webkit-fill-available;
+}
+#twitter .btn-back{
+    float: left;
+    margin: 30px;
+}
+#twitter .logo{
+    float: right;
+    margin: 20px 40px;
+    width: 220px;
+}
+#twitter .btn-send{
+    background-color: #1DA1F2;
+    color: black;
+    border-radius: 8px;
+    border: 0px;
+    padding: 3px 32px;
+    margin-left: auto;
+}
+#twitter .btn-delete{
+    background-color: white;
+    color: #E33629;
+    border-radius: 8px;
+    border: 0px;
+    font-size: 18px;
+    padding: 7px 12px;
+    margin-left: auto;
+    box-shadow: 0px 0px 10px #00000030;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+#twitter .card img{
+    width: 50px; height: 50px;
+}
+#twitter .card p{
+    text-align: left;
+}
+#twitter .card .status{
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+
+/* *{border: 1px solid black} */
