@@ -30,7 +30,7 @@
 <body id="twitter">
   <div style="background-color: rgba(255, 255, 255, 0.8); min-height: 100vh;">
     <button class="btn-back p-1 px-2">
-      <a href="index.php" style="text-decoration: none; color: white;"><i class="fa fa-arrow-left mr-2"></i> BACK</a>
+      <a href="admin-index.php" style="text-decoration: none; color: white;"><i class="fa fa-arrow-left mr-2"></i> BACK</a>
     </button>
     <img class="logo" src="img/Dragon_Ball_Z_Logo_Png-removebg-preview.png" alt="DBZ Logo">
     <center>
@@ -66,6 +66,7 @@
 					$isi=$row['isi'];
 					$waktu=$row['tanggal'];
 					$gambar=$row['foto_profil'];
+                    $id_status=$row['id_status'];
 
 					echo "<div class='card'>    
 					<div class='d-flex'>
@@ -76,6 +77,10 @@
 							<b>".$nama."</b>
 							<span style='color: #666;'>@".$username." · ".$waktu."</span>
 						  </p>
+                          <a href='admin-hapus-status.php?id_status=$id_status'><button class='btn-delete'>
+                            <i class='fa fa-trash-alt'></i>
+                            </button>
+                            </a>
 						</div>
 						<p class='status'>
 						  ".$isi."

@@ -30,7 +30,7 @@
                 <span>Admin</span>
             </div>
         </div>
-        <button class="status-button" onclick="PaymentRequestUpdateEvent">Status</button>
+        <a href="admin-status.php"><button class="status-button" onclick="PaymentRequestUpdateEvent">Status</button></a>
     </div>
 
     <div class="table-container">
