@@ -26,7 +26,7 @@ if (isset($_POST['login'])) {
             
             if ($row['username'] == "admin") {
                 $_SESSION["admin"] = true;
-                header("Location: admin.php");
+                header("Location: admin-index.php");
             } else {
                 header("Location: index.php");
             }

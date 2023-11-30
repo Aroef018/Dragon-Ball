@@ -1,10 +1,11 @@
 <?php
 	include("koneksi.php");
 	session_start();
-
-	$gambar = $_SESSION['gambar'];
-
-	$username = $_SESSION['username'];
+    if(!isset($_SESSION['username'])){
+		header("location: login.php");
+	}else{
+		$gambar = $_SESSION['gambar'];
+		$username = $_SESSION['username'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +25,7 @@
 
     <div class="admin-header">
         <div class="logo-and-info">
-            <a href="profil.php"><img src="image/<?php echo $gambar;?>" alt="Admin Avatar" class="admin-avatar"></a>
+            <a href="profil.php"><img src="img/<?php echo $gambar;?>" alt="Admin Avatar" class="admin-avatar"></a>
             <div class="admin-info">
                 <span>Admin</span>
             </div>
@@ -52,10 +53,10 @@
 		            echo "<td>" . $no++ . "</td>";
 		            echo "<td>" . $row['username'] . "</td>";
 		            echo "<td>" . $row['nyawa'] . "</td>";
-		            echo "<td>" . $row['kesempatan_serang'] . "</td>";
+		            echo "<td>" . $row['serang'] . "</td>";
 		            echo "<td>";
-		            echo "<a href='serang.php?musuh=$username_musuh'><button class='action-button'><i class='fab fa-fort-awesome'></i></button></a>";
-		            echo "<a href='serang.php?musuh=$username_musuh'><button class='action-button delete-button'><i class='fas fa-trash-alt'></i></button></a>";
+		            echo "<a href='admin-serang.php?musuh=$username_musuh'><button class='action-button'><i class='fab fa-fort-awesome'></i></button></a>";
+		            echo "<a href='admin-hapus.php?musuh=$username_musuh'><button class='action-button delete-button'><i class='fas fa-trash-alt'></i></button></a>";
 		            echo "</td>";
 		            echo "</tr>";
 		        }
@@ -72,3 +73,6 @@
     </script>
 </body>
 </html>
+        <?php
+    }
+    ?>

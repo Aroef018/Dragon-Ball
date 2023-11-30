@@ -1,10 +1,12 @@
 <?php
 	include("koneksi.php");
 	session_start();
-
-	$gambar = $_SESSION['gambar'];
-
-	$username = $_SESSION['username'];
+	
+	if(!isset($_SESSION['username'])){
+		header("location: login.php");
+	}else{
+		$gambar = $_SESSION['gambar'];
+		$username = $_SESSION['username'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,3 +73,6 @@
     </script>
 </body>
 </html>
+		<?php
+		}
+	?>
