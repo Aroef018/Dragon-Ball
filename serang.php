@@ -20,40 +20,80 @@
 ?>
 
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Serang Musuh</title>
-</head>
-<body>
-	<div>
-		<a href="index.php">Back</a><h2 align="right">Gambar bocil</h2>
-		<h1 align="center">Dragon Ball</h1>
-	</div>
+<html lang="en">
 
-	<div style="display: flex;">
-		<div style="flex: 1;">
-			<?php echo "<img src='image/".$gambar."' width=100px height=100px>" ?>
-			<p><?php echo $nama; ?></p>
-			<p>Nyawa</p>
-			<p><?php echo $nyawa; ?></p>
-			<p>Kesempatan Serang</p>
-			<p><?php echo $serang; ?></p>
-		</div>
-		<div style="flex: 1;" align="center">
-			<h1>VS</h1>
-			<a href="attack.php?musuh=<?php echo $musuh;?>">Serang</a> <br>
-			<a href="kesempatan.php?musuh=<?php echo $musuh;?>">Tambah kesempatan</a>
-		</div>
-		<div style="flex: 1;" align="right">
-			<?php echo "<img src='image/".$gambar_musuh."' width=100px height=100px>" ?>
-			<p><?php echo $nama_musuh; ?></p>
-			<p>Nyawa</p>
-			<p><?php echo $nyawa_musuh; ?></p>
-			<p>Kesempatan Serang</p>
-			<p><?php echo $serang_musuh; ?></p>
-		</div>
-	</div>	
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serang | Page</title>
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" crossorigin="anonymous">
+</head>
+
+<body id="serang">
+
+    <div class="container">
+      <div class="content">
+        <!-- Isi content di sini -->    
+        <a href="index.php"><button class="btn-back p-1 px-2">
+          <i class="fa fa-arrow-left mr-2"></i> BACK
+        </button></a>
+
+        <img id="img-goku" src="img/goku-majin.png" alt="">
+
+        <div class="d-flex m-5" style="justify-content: space-between;">
+          
+          <div class="player">
+            <center>
+              <img src="img/<?php echo $gambar; ?>" alt="" style="border-radius: 50%;">
+              <h2 class=""><?php echo $nama; ?></h2>
+              <p class="mb-2">Sisa Nyawa</p>
+              <div class="d-flex">
+                <div class="d-flex mx-auto">
+                  <div class="life-bar" style="background-color:#00B007;"></div>
+                  <span class="ml-2"><b><?php echo $nyawa; ?></b></span>
+                </div>
+              </div>
+              <p class="mb-2">Kesempatan Serang</p>
+              <h2 class=""><b><?php echo $serang; ?></b></h2>
+            </center>
+          </div>
+          
+          <div>
+            <center>
+              <img src="img/Dragon_Ball_Z_Logo_Png-removebg-preview.png" alt="" style="width: 220px !important;">
+              <h1 class="text-black" style="font-size: 72px;">VS</h1>
+              <div style="height: 100px;"></div>
+              <a href="attack.php?musuh=<?php echo $musuh;?>"><button class="btn-serang mb-4">SERANG</button></a>
+              <br>
+              <a href="kesempatan.php?musuh=<?php echo $musuh;?>" style="text-decoration: none;"><h3 class="text-black">Tambahkan Serang</h3></a>
+            </center>
+          </div>
+          
+          <div class="player">
+            <center>
+              <img src="img/<?php echo $gambar_musuh; ?>" alt="" style="border-radius: 50%;">
+              <h2 class=""><?php echo $nama_musuh; ?></h2>
+              <p class="mb-2">Sisa Nyawa</p>
+              <div class="d-flex">
+                <div class="d-flex mx-auto">
+                  <span class="mr-2"><b><?php echo $nyawa_musuh; ?></b></span>
+                  <div class="life-bar" style="background-color:#1DA1F2;"></div>
+                </div>
+              </div>
+              <p class="mb-2">Kesempatan Serang</p>
+              <h2 class=""><b><?php echo $serang_musuh; ?></b></h2>
+            </center>
+          </div>
+        
+        </div>
+      </div>  
+    </div>
+
 </body>
+
 </html>

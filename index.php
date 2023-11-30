@@ -1,59 +1,73 @@
 <?php
 	include("koneksi.php");
 	session_start();
-	//untuk menampilkan foto profil dan nama pengguna
+
 	$gambar = $_SESSION['gambar'];
-	//echo "<img src='image/".$gambar."' height=100px width=100px'>";
-	//echo $_SESSION['username'];
-
-
 
 	$username = $_SESSION['username'];
 ?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <title>Admin Database</title>
 </head>
 <body>
-	<h1 align="center">User Database</h1>
-	<a href="logout.php" style="float: right;">Log Out</a>
-	<a href="profil.php"><img src="image/<?php echo $gambar;?>" width=100px height=100px></a> <?php echo $username; ?> <br>
-	<a href="status.php" style="float: right;">Status</a>
+    <div class="header">
+        <a href="logout.php"><button><i class="fas fa-sign-out-alt"></i> Logout</button></a>
+    </div>
 
-	<table border="1" align="center">
-		<th>No</th>
-		<th>Nama</th>
-		<th>Nyawa</th>
-		<th>Kesempatan Serang</th>
-		<th>Aksi</th>
-		<?php
-			$username = $_SESSION['username'];
-			$sql="SELECT * FROM users WHERE username != '$username'";
-			$result=mysqli_query($conn, $sql);
-			$nomor=1;
-			while($row=mysqli_fetch_assoc($result)){
-				$nama=$row['nama'];
-				$nyawa=$row['nyawa'];
-				$serang=$row['serang'];
-				$username_musuh=$row['username'];
-				echo "<tr>
-					<td>".$nomor."</td>
-					<td>".$nama."</td>
-					<td>".$nyawa."</td>
-					<td>".$serang."</td>
-					<td><a href='serang.php?musuh=$username_musuh'>Serang</a></td>
+    <h2 class="shadow">USER DATABASE</h2>
 
-				</tr>";
-				$nomor++;
-			}
+    <div class="admin-header">
+        <div class="logo-and-info">
+            <a href="profil.php"><img src="img/<?php echo $gambar;?>" alt="Admin Avatar" class="admin-avatar"></a>
+            <div class="admin-info">
+                <span><?php echo $username; ?></span>
+            </div>
+        </div>
+        <button class="status-button" onclick="PaymentRequestUpdateEvent">Status</button>
+    </div>
 
+    <div class="table-container">
+        <table class="admin-table">
+            <tr>
+                <th>No</th>
+                <th>USERNAME</th>
+                <th>NYAWA</th>
+                <th>KESEMPATAN SERANG</th>
+                <th>AKSI</th>
+            </tr>
+            <?php
+            	$sql="SELECT * FROM users WHERE username!='$username' and username!='admin'";
+            	$result=mysqli_query($conn, $sql);
 
-		?>
-	</table>
+            	$no = 1;
+		        while ($row = mysqli_fetch_assoc($result)) {
+		        	$username_musuh=$row['username'];
+		            echo "<tr>";
+		            echo "<td>" . $no++ . "</td>";
+		            echo "<td>" . $row['username'] . "</td>";
+		            echo "<td>" . $row['nyawa'] . "</td>";
+		            echo "<td>" . $row['serang'] . "</td>";
+		            echo "<td>";
+		            echo "<a href='serang.php?musuh=$username_musuh'><button class='action-button'><i class='fab fa-fort-awesome'></i></button></a>";
+		            echo "</td>";
+		            echo "</tr>";
+		        }
 
+            ?>
+        </table>
+    </div>
+
+    <script>
+        function logout() {
+            // Add your logout logic here
+            alert('Logout clicked!'); // Replace this with actual logout logic
+        }
+    </script>
 </body>
 </html>

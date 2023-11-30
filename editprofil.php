@@ -9,7 +9,7 @@
     if(isset($_POST['simpan'])){
         $foto = $_FILES['foto']['name'];
         $file_tmp = $_FILES['foto']['tmp_name'];
-        move_uploaded_file($file_tmp, 'image/'. $foto);
+        move_uploaded_file($file_tmp, 'img/'. $foto);
         if($foto!=""){
             $sql = "UPDATE users SET foto_profil='$foto' WHERE username='$username'";
             $result=mysqli_query($conn, $sql);
@@ -48,7 +48,7 @@
     <a href="profil.php" class="back-button" style="text-decoration: none;"><i class="fas fa-arrow-left"></i> Back</a>
     <div class="container">
         <div class="left-section">
-            <img src="image/<?php echo $gambar; ?>" class="image-preview">
+            <img src="img/<?php echo $gambar; ?>" class="image-preview">
             <div>
             <label id="img" for="image-upload" class="button">Add Profile Photo</label>
             <input type="file" id="image-upload" name="foto" /></div>
