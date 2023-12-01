@@ -54,7 +54,7 @@
               <p class="mb-2">Sisa Nyawa</p>
               <div class="d-flex">
                 <div class="d-flex mx-auto">
-                  <div class="life-bar" style="background-color:#00B007;"></div>
+                  <div class="life-bar" style="background-color:#00B007; width: <?php echo $nyawa * 20; ?>px;""></div>
                   <span class="ml-2"><b><?php echo $nyawa; ?></b></span>
                 </div>
               </div>
@@ -83,7 +83,7 @@
               <div class="d-flex">
                 <div class="d-flex mx-auto">
                   <span class="mr-2"><b><?php echo $nyawa_musuh; ?></b></span>
-                  <div class="life-bar" style="background-color:#1DA1F2;"></div>
+                  <div class="life-bar" style="background-color:#1DA1F2; width: <?php echo $nyawa_musuh * 20; ?>px;"></div>
                 </div>
               </div>
               <p class="mb-2">Kesempatan Serang</p>
