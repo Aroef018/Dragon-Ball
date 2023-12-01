@@ -1,0 +1,154 @@
+body {
+    font-family: 'arial', sans-serif;
+    background-image: url(img/a19621b6f93acf6a4a0381c3511a2a9d.jpg);
+    background-size: 100%;
+    color: white;
+    margin: 0;
+}
+
+.header {
+    text-align: right;
+    padding: 10px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: red;
+    color: white;
+}
+
+.fa-sign-out-alt {
+    margin-right: 5px;
+}
+
+h2 {
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+    margin-top: 20px;
+}
+
+.shadow {
+    text-shadow: 2px 2px 4px #000;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-left: 100px;
+}
+
+.admin-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo-and-info {
+    display: flex;
+    align-items: center;
+}
+
+.logo-and-info i {
+    margin-right: 10px;
+}
+
+.admin-info {
+    display: flex;
+    align-items: center;
+}
+
+.admin-info span {
+    margin-right: 10px;
+    font-weight: bold ;
+}
+
+.table-container {
+    margin: 20px auto;
+    max-width: 1050px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.admin-table th:first-child,
+.admin-table td:first-child {
+    border-left: none;
+}
+
+.admin-table th {
+    border-top: none;
+}
+
+.admin-table th:last-child,
+.admin-table td:last-child {
+    border-right: none;
+}
+
+
+.fab fa-fort-awesome {
+    color: white;
+}
+
+.action-button:hover {
+    background-color: red;
+    color: white;
+}
+
+.action-button:active {
+    background-color: white;
+    color: red;
+}
+
+/* Your existing CSS styles */
+
+.status-button {
+    background-color: #1DA1F2;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    margin-right: 100px;
+}
+
+.status-button:hover {
+    background-color: #002699; /* Darker blue on hover */
+
+}
+
+.action-button {
+    background-color: #e6e6e6; /* Light gray background color */
+    color: red;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    transition-duration: 0.4s;
+}
