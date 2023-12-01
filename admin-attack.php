@@ -1,5 +1,7 @@
 <?php
 	include("koneksi.php");
+	include("tambah.php");
+	include("kurang.php");
 	session_start();
 	$username = $_SESSION['username'];
 	$serang = $_SESSION['serang'];
@@ -17,9 +19,9 @@
 		      </script>';
 
 	}else{
-		$serang--;
+		$serang=kurangSatu($serang);
 		$_SESSION['serang']=$serang;
-		$nyawa_musuh--;
+		$nyawa_musuh=kurangSatu($nyawa_musuh);
 
 		$sql="UPDATE users SET serang='$serang' WHERE username='$username'";
 		$result=mysqli_query($conn, $sql);
