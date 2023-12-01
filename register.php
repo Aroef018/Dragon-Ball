@@ -17,8 +17,6 @@ if (isset($_POST['register'])) {
                   </script>';
     } else {
     
-                // Hash the password before storing it in the database (you should use a proper hashing method)
-                //$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
                 $sql = "INSERT INTO users (username, nama, password, foto_profil, nyawa, serang) VALUES ('$username', '$nama', '$password', '$gambar', 10, 5)";
                 $result = mysqli_query($conn, $sql);

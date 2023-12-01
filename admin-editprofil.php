@@ -16,20 +16,28 @@
                $_SESSION['gambar']= $foto;
         }
 
-
         $username_baru=$_POST['username'];
-        $nama_baru=$_POST['nama'];
-        $bio_baru=$_POST['bio'];
-        
-
-        $sql="UPDATE users SET username='$username_baru', nama='$nama_baru', bio='$bio_baru' WHERE username='$username'";
+        $sql="SELECT * FROM users WHERE username='$username_baru'";
         $result=mysqli_query($conn, $sql);
-
-        if($result){
-            $_SESSION['username'] = $username_baru;
-            $_SESSION['nama']=$nama_baru;
-            $_SESSION['bio']=$bio_baru;
-            header("location: admin-profil.php");
+        if(mysqli_num_rows($result)>0){
+            echo '<script type="text/javascript">
+                    alert("username telahh digunakan");
+                    window.location = "admin-editprofil.php";
+                  </script>';
+        }else{
+            $nama_baru=$_POST['nama'];
+            $bio_baru=$_POST['bio'];
+            
+    
+            $sql="UPDATE users SET username='$username_baru', nama='$nama_baru', bio='$bio_baru' WHERE username='$username'";
+            $result=mysqli_query($conn, $sql);
+    
+            if($result){
+                $_SESSION['username'] = $username_baru;
+                $_SESSION['nama']=$nama_baru;
+                $_SESSION['bio']=$bio_baru;
+                header("location: admin-profil.php");
+            }
         }
     }
 ?>
